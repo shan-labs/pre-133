@@ -14,7 +14,7 @@ int getinput(int lim){
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    printf("Woah there, that isn't a valid input...\n For time's sake, you'll be assigned a number.\n");
+    printf("Woah there, that isn't a valid input..\n For time's sake, you'll be assigned a number.\n");
     //initialize random seed
     srand (time(NULL));
     //generate number between 1 and lim - 1 
@@ -39,7 +39,7 @@ void factorial(int i){
 
 void fibonacci(int i){
   unsigned int value;
-  
+  //base cases.. sorta
   if(i < 2){
     value = i;
   }else{
@@ -68,10 +68,11 @@ int main(){
   factorial(input); //calculate
   
   //explain next
-  printf("Now, type a number and we'll the nth number in the fibonacci sequence (index starting at 0). Let it be less than or equal to 47, for the sake of memory.\n Input: ");
+  printf("Now, type a number and we'll find the nth number in the fibonacci sequence (index starting at 0) at that index. Let it be less than or equal to 47, for the sake of memory.\n Input: ");
   
   input = getinput(47); //ask for input + validate input
-  fibonacci(input);
+  fibonacci(input); //calculate
+  
   //finished
   printf("\nFin\n");
   return 0;
